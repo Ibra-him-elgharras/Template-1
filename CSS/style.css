@@ -2,25 +2,57 @@
     padding: 0;
     margin: 0;
     color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body{
     background-color: #001;
 }
 
-.profile{
-    display: none;
+.img-box{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid white;
+    flex-shrink: 0;
 }
+
+.img-box img{
+    width: 100%;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile h2{
+    font-size: 20px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+
 
 .menu{
     background-color: #123;
-    width: 260px;
+    width: 60px;
     height: 100vh;
     padding: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.menu:hover{
+    width: 260px;
 }
 
 ul{
     list-style: none;
+    position: relative;
+    height: 95%;
 }
 
 ul li a{
@@ -35,6 +67,21 @@ ul li a{
     transition: 0.5s;
 }
 
-ul li a:hover{
+ul li a:hover, .active{
    background-color: #ffffff55;
+}
+
+.log-out{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.log-out a{
+    background-color: #a00;
+}
+
+ul li a i{
+    font-size: 30px;
+
 }
